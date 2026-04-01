@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>デイサービスセンターやわらぎ 業務マニュアル</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,8 +23,8 @@
     <li><a href="#ch2" class="nav-link">2. 生活相談員業務</a></li>
     <li><a href="#ch3" class="nav-link">3. 記録・システム入力</a></li>
     <li><a href="#ch4" class="nav-link">4. 個別ケア・食事</a></li>
-    <li><a href="#ch5" class="nav-link">5. 体操・口腔ケア・レク</a></li>
-    <li><a href="#ch6" class="nav-link">6. 緊急時・感染症対策</a></li>
+    <li><a href="#ch5" class="nav-link">5. 体操・口腔ケア</a></li>
+    <li><a href="#ch6" class="nav-link">6. 緊急時・感染症</a></li>
     <li class="nav-divider">帳票ダウンロード</li>
     <li><a href="#print-schedule" class="nav-link">週間スケジュール表</a></li>
     <li><a href="#print-seating" class="nav-link">座席表</a></li>
@@ -32,7 +32,7 @@
     <li><a href="#print-snack" class="nav-link">おやつ形態一覧表</a></li>
     <li><a href="#print-hospital" class="nav-link">病院・服薬一覧</a></li>
     <li class="nav-divider">付録</li>
-    <li><a href="#appendix-usage" class="nav-link">使用書（本書の使い方）</a></li>
+    <li><a href="#appendix-usage" class="nav-link">使用書</a></li>
   </ul>
 </nav>
 
@@ -42,535 +42,851 @@
 
   <!-- 表紙 -->
   <header class="cover">
+    <div class="cover-icon">
+      <svg viewBox="0 0 100 100" width="100" height="100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#D4729C" stroke-width="2" opacity=".3"/>
+        <text x="50" y="38" text-anchor="middle" font-size="28">🌸</text>
+        <text x="50" y="68" text-anchor="middle" font-size="14" fill="#B8527E" font-family="'Noto Sans JP'">やわらぎ</text>
+      </svg>
+    </div>
     <h1>デイサービスセンターやわらぎ<br>業務マニュアル</h1>
-    <p class="subtitle">通所介護サービスにおける日常業務・帳票管理の手引き</p>
+    <p class="subtitle">通所介護サービスの手引き</p>
     <p class="version">最終更新: 2026年4月</p>
   </header>
 
-  <!-- 目次 -->
+  <!-- ========== 目次 ========== -->
   <section id="toc" class="chapter">
-    <h2>目 次</h2>
-    <div class="toc-container">
-      <ol class="toc-list">
-        <li><a href="#ch1">第1章 一日の業務フロー（日次業務）</a>
-          <ol>
-            <li><a href="#ch1-1">1.1 朝の準備（出勤〜8:35）</a></li>
-            <li><a href="#ch1-2">1.2 お迎え〜午前の業務（8:35〜12:00）</a></li>
-            <li><a href="#ch1-3">1.3 昼食〜午後の業務（12:10〜13:50）</a></li>
-            <li><a href="#ch1-4">1.4 午後体操・レクリエーション（13:50〜15:00）</a></li>
-            <li><a href="#ch1-5">1.5 おやつ〜帰宅（15:00〜16:30）</a></li>
-          </ol>
-        </li>
-        <li><a href="#ch2">第2章 生活相談員業務（スケジュール管理・事務）</a>
-          <ol>
-            <li><a href="#ch2-1">2.1 週次業務（毎週金曜日）</a></li>
-            <li><a href="#ch2-2">2.2 月次業務（勤務表・カンファレンス）</a></li>
-            <li><a href="#ch2-3">2.3 月末処理</a></li>
-          </ol>
-        </li>
-        <li><a href="#ch3">第3章 記録業務・システム入力</a>
-          <ol>
-            <li><a href="#ch3-1">3.1 デイリー入力（タブレット操作）</a></li>
-            <li><a href="#ch3-2">3.2 AppSheet入力（ホーム連携）</a></li>
-          </ol>
-        </li>
-        <li><a href="#ch4">第4章 個別ケア・食事・おやつ</a>
-          <ol>
-            <li><a href="#ch4-1">4.1 食事・おやつ形態の管理</a></li>
-            <li><a href="#ch4-2">4.2 入浴介助の個別対応</a></li>
-            <li><a href="#ch4-3">4.3 イベント・外出レクの注意点</a></li>
-          </ol>
-        </li>
-        <li><a href="#ch5">第5章 体操・口腔ケア・レクリエーション</a>
-          <ol>
-            <li><a href="#ch5-1">5.1 午後体操プログラム（上半身）</a></li>
-            <li><a href="#ch5-2">5.2 午後体操プログラム（下半身）</a></li>
-            <li><a href="#ch5-3">5.3 指先・手の運動</a></li>
-            <li><a href="#ch5-4">5.4 口腔体操</a></li>
-          </ol>
-        </li>
-        <li><a href="#ch6">第6章 緊急時対応・感染症対策・通院</a>
-          <ol>
-            <li><a href="#ch6-1">6.1 感染症発生時の対応</a></li>
-            <li><a href="#ch6-2">6.2 担当医院一覧と通院対応</a></li>
-          </ol>
-        </li>
-      </ol>
-      <div class="toc-section">
-        <h3>帳票一覧（印刷・PDF出力対応）</h3>
-        <ol class="toc-list" start="7">
-          <li><a href="#print-schedule">週間スケジュール表 / 入浴種別一覧表</a></li>
-          <li><a href="#print-seating">座席表（曜日別レイアウト）</a></li>
-          <li><a href="#print-birthday">月別誕生日一覧表</a></li>
-          <li><a href="#print-snack">おやつ形態一覧表</a></li>
-          <li><a href="#print-hospital">利用者病院一覧 / 服薬チェックリスト</a></li>
-        </ol>
-      </div>
-      <div class="toc-section">
-        <h3>付録</h3>
-        <ul class="toc-list">
-          <li><a href="#appendix-usage">使用書（本書の使い方）</a></li>
-        </ul>
-      </div>
+    <h2>📖 目 次</h2>
+    <div class="toc-visual">
+      <a href="#ch1" class="toc-card">
+        <div class="toc-card-icon">🌅</div>
+        <div class="toc-card-label">第1章<br>一日の業務フロー</div>
+      </a>
+      <a href="#ch2" class="toc-card">
+        <div class="toc-card-icon">📋</div>
+        <div class="toc-card-label">第2章<br>相談員業務</div>
+      </a>
+      <a href="#ch3" class="toc-card">
+        <div class="toc-card-icon">📱</div>
+        <div class="toc-card-label">第3章<br>記録・入力</div>
+      </a>
+      <a href="#ch4" class="toc-card">
+        <div class="toc-card-icon">🍽️</div>
+        <div class="toc-card-label">第4章<br>ケア・食事</div>
+      </a>
+      <a href="#ch5" class="toc-card">
+        <div class="toc-card-icon">🤸</div>
+        <div class="toc-card-label">第5章<br>体操・口腔</div>
+      </a>
+      <a href="#ch6" class="toc-card">
+        <div class="toc-card-icon">🏥</div>
+        <div class="toc-card-label">第6章<br>緊急時対応</div>
+      </a>
+    </div>
+    <div class="toc-visual" style="margin-top:16px;">
+      <a href="#print-schedule" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">📅</div>
+        <div class="toc-card-label">スケジュール表</div>
+      </a>
+      <a href="#print-seating" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">💺</div>
+        <div class="toc-card-label">座席表</div>
+      </a>
+      <a href="#print-birthday" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">🎂</div>
+        <div class="toc-card-label">誕生日一覧</div>
+      </a>
+      <a href="#print-snack" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">🍡</div>
+        <div class="toc-card-label">おやつ形態</div>
+      </a>
+      <a href="#print-hospital" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">💊</div>
+        <div class="toc-card-label">病院・服薬</div>
+      </a>
+      <a href="#appendix-usage" class="toc-card toc-card-sub">
+        <div class="toc-card-icon">📘</div>
+        <div class="toc-card-label">使用書</div>
+      </a>
     </div>
   </section>
 
-  <!-- 第1章 -->
+  <!-- ========== 第1章 一日の業務フロー ========== -->
   <section id="ch1" class="chapter">
-    <h2>第1章 一日の業務フロー（日次業務）</h2>
-    <p>デイサービスの一日の流れを、時間帯ごとに示します。各業務の詳細手順に従い、安全で快適なサービス提供を心がけてください。</p>
+    <h2>🌅 第1章 一日の業務フロー</h2>
+    <p class="chapter-intro">一日の流れを時間順に図解しています。上から下へ順番にご覧ください。</p>
 
-    <div class="timeline">
-      <div class="timeline-item" id="ch1-1">
-        <div class="time-badge">出勤後〜8:35</div>
-        <h3>1.1 朝の準備</h3>
-        <div class="checklist">
-          <h4>環境整備</h4>
-          <ul>
-            <li>ポット内に水を補充する</li>
-            <li>カーテン・窓を開けて換気する</li>
-            <li>洗面台の電源を入れる</li>
-            <li>トイレの座面等のスイッチをONにする</li>
-            <li>和室ベッドの電源を入れ、布団を整える</li>
-          </ul>
-          <h4>浴室準備</h4>
-          <ul>
-            <li>脱衣所と浴室内の準備を行う</li>
-            <li>8:30頃にお湯張りを開始する</li>
-          </ul>
-          <h4>消毒・衛生</h4>
-          <ul>
-            <li>各バケツに消毒液（オスバン・カラーブリーチ等）を準備する</li>
-            <li>血圧計・体温計をセットする</li>
-          </ul>
-        </div>
+    <!-- 朝の準備 -->
+    <div class="visual-flow-card">
+      <div class="flow-time">
+        <div class="flow-time-icon">☀️</div>
+        <div class="flow-time-text">出勤後<br>〜8:35</div>
       </div>
-
-      <div class="timeline-item" id="ch1-2">
-        <div class="time-badge">8:35〜12:00</div>
-        <h3>1.2 お迎え〜午前の業務</h3>
-        <div class="checklist">
-          <h4>お迎え（8:35）</h4>
-          <ul>
-            <li>利用者のお迎えに出発する</li>
-            <li>リーダーは施設に残り、バイタルチェック・再検を行う</li>
-            <li>入浴用オレンジの袋を持ってくる</li>
-            <li>曜日により酸素濃縮装置を持ってくる</li>
-          </ul>
-          <h4>デイ開始（8:55）</h4>
-          <ul>
-            <li>リーダーが挨拶を行う</li>
-            <li>ラジオ体操を実施する</li>
-            <li>飲み終わったコップ類を片付けて洗う</li>
-          </ul>
-          <h4>バイタル測定</h4>
-          <ul>
-            <li>来所後すぐにバイタルを測定する（体温・血圧・脈拍）</li>
-            <li>異常値が出た場合は必ず再検する</li>
-          </ul>
-          <div class="alert alert-warning">
-            <strong>注意:</strong> バイタル異常値の基準 — 血圧上180/下110以上、体温37.5℃以上、脈拍100以上/50以下の場合は再検し、リーダーに報告すること。
+      <div class="flow-body">
+        <h3>朝の準備</h3>
+        <div class="icon-grid">
+          <div class="icon-item">
+            <div class="icon-circle">🚰</div>
+            <span>ポットに<br>水を入れる</span>
           </div>
-          <h4>入浴介助（9:00頃〜）</h4>
-          <ul>
-            <li>基本4名体制で入浴介助を行う</li>
-            <li>利用者の自立度・身体的特徴に応じた個別対応を行う（第4章参照）</li>
-          </ul>
-          <h4>フロア活動</h4>
-          <ul>
-            <li>入浴待ちの利用者に脳トレ（塗り絵、パズル等）を提供する</li>
-            <li>音楽を流す</li>
-            <li>薬の確認を行い、実施票に黒ペンでチェックする</li>
-          </ul>
-          <h4>昼食前準備（11:00〜）</h4>
-          <ul>
-            <li>テーブルを拭き、手指消毒を行う</li>
-            <li>トイレ誘導を実施する</li>
-            <li>テーブル席への誘導を行う</li>
-          </ul>
-          <h4>配膳・服薬（11:40〜11:45）</h4>
-          <ul>
-            <li>食事を配膳する（食事形態を必ず確認すること）</li>
-            <li>服薬を確認し、実施票にチェックする</li>
-          </ul>
+          <div class="icon-item">
+            <div class="icon-circle">🪟</div>
+            <span>窓を開けて<br>換気する</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">🔌</div>
+            <span>洗面台・トイレ<br>電源ON</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">🛏️</div>
+            <span>和室ベッド<br>電源ON・整える</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">🛁</div>
+            <span>浴室準備<br>お湯張り</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">🧴</div>
+            <span>消毒液<br>準備する</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">🌡️</div>
+            <span>血圧計・体温計<br>セットする</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item" id="ch1-3">
-        <div class="time-badge">12:10〜13:50</div>
-        <h3>1.3 昼食〜午後の業務</h3>
-        <div class="checklist">
-          <h4>食後対応（12:10頃〜）</h4>
-          <ul>
-            <li>早く食べ終わった利用者から下膳する</li>
-            <li>口腔ケアを実施する</li>
-            <li>トイレ誘導を行う</li>
-            <li>口腔・トイレ終了後、昼休憩する場所へ誘導する</li>
-            <li>エプロンを洗濯し、たたむ</li>
-          </ul>
-          <h4>職員交代（12:30〜）</h4>
-          <ul>
-            <li>遅食職員は落ち着いたら記録に入る</li>
-            <li>早食の職員が戻ってきたら交代する</li>
-            <li>昼休憩時の見守りを行う</li>
-          </ul>
-          <h4>午後の準備（13:25〜）</h4>
-          <ul>
-            <li>レクリエーション活動の準備をする</li>
-            <li>離床、トイレ誘導を行い、席へ誘導する</li>
-          </ul>
+    <div class="flow-arrow">▼</div>
+
+    <!-- お迎え〜午前 -->
+    <div class="visual-flow-card">
+      <div class="flow-time">
+        <div class="flow-time-icon">🚗</div>
+        <div class="flow-time-text">8:35<br>〜12:00</div>
+      </div>
+      <div class="flow-body">
+        <h3>お迎え → 午前の活動</h3>
+
+        <!-- お迎えフロー図解 -->
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-icon">🚗</div>
+            <div class="process-label">お迎え<br><small>8:35出発</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🌡️</div>
+            <div class="process-label">バイタル<br><small>体温・血圧</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🏋️</div>
+            <div class="process-label">ラジオ体操<br><small>8:55〜</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🛁</div>
+            <div class="process-label">入浴介助<br><small>4名体制</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🧩</div>
+            <div class="process-label">脳トレ<br><small>塗り絵等</small></div>
+          </div>
+        </div>
+
+        <!-- バイタル注意 -->
+        <div class="alert-visual alert-visual-warning">
+          <div class="alert-visual-icon">⚠️</div>
+          <div class="alert-visual-body">
+            <strong>バイタル異常時</strong>
+            <div class="alert-numbers">
+              <span class="alert-num">血圧 <strong>180/110以上</strong></span>
+              <span class="alert-num">体温 <strong>37.5℃以上</strong></span>
+              <span class="alert-num">脈拍 <strong>100以上 or 50以下</strong></span>
+            </div>
+            <div class="alert-action">→ 再検して <strong>リーダーに報告</strong></div>
+          </div>
+        </div>
+
+        <!-- 午前の薬チェック -->
+        <div class="mini-note">
+          <span class="mini-note-icon">💊</span>
+          <span>薬の確認 → 実施票に <strong>黒ペン</strong> でチェック ✓</span>
+        </div>
+
+        <!-- 配膳 -->
+        <div class="process-flow" style="margin-top:16px;">
+          <div class="process-step">
+            <div class="process-icon">🧹</div>
+            <div class="process-label">テーブル拭き<br><small>11:00〜</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🚻</div>
+            <div class="process-label">トイレ<br><small>誘導</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🍽️</div>
+            <div class="process-label">配膳・服薬<br><small>11:40〜</small></div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item" id="ch1-4">
-        <div class="time-badge">13:50〜15:00</div>
-        <h3>1.4 午後体操・レクリエーション</h3>
-        <div class="checklist">
-          <ul>
-            <li>窓を開放して空気の入れ替えをする</li>
-            <li>体操を実施する（約20分）— 詳細は第5章参照</li>
-            <li>口腔体操を行う（「パタカラ」「あいうべ」体操）</li>
-            <li>レクリエーション活動を実施する</li>
-          </ul>
+    <div class="flow-arrow">▼</div>
+
+    <!-- 昼食〜午後 -->
+    <div class="visual-flow-card">
+      <div class="flow-time">
+        <div class="flow-time-icon">🍙</div>
+        <div class="flow-time-text">12:10<br>〜13:50</div>
+      </div>
+      <div class="flow-body">
+        <h3>昼食 → 午後の準備</h3>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-icon">🍽️</div>
+            <div class="process-label">下膳</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🪥</div>
+            <div class="process-label">口腔ケア</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🚻</div>
+            <div class="process-label">トイレ誘導</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">😴</div>
+            <div class="process-label">休憩へ<br><small>誘導</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">👕</div>
+            <div class="process-label">エプロン<br><small>洗濯</small></div>
+          </div>
+        </div>
+
+        <div class="mini-note" style="margin-top:12px;">
+          <span class="mini-note-icon">🔄</span>
+          <span>12:30〜 職員交代（早食→戻ったら交代 → 見守り）</span>
+        </div>
+        <div class="mini-note">
+          <span class="mini-note-icon">🎪</span>
+          <span>13:25〜 レク準備 → 離床・トイレ誘導 → 席へ</span>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item" id="ch1-5">
-        <div class="time-badge">15:00〜16:30</div>
-        <h3>1.5 おやつ〜帰宅</h3>
-        <div class="checklist">
-          <h4>おやつ提供（15:00）</h4>
-          <ul>
-            <li>おやつを提供する（利用者ごとの形態を確認すること — 第4章参照）</li>
-            <li>飲み物を配る</li>
-          </ul>
-          <h4>終了体操（15:55）</h4>
-          <ul>
-            <li>「ボケたらあかん体操」を行う</li>
-          </ul>
-          <h4>帰宅準備・送迎</h4>
-          <ul>
-            <li>帰りの準備を行い、ホームへ誘導する</li>
-            <li>送迎を実施する</li>
-            <li>施設の片付け・消毒を行う</li>
-          </ul>
+    <div class="flow-arrow">▼</div>
+
+    <!-- 午後体操・レク -->
+    <div class="visual-flow-card">
+      <div class="flow-time">
+        <div class="flow-time-icon">🤸</div>
+        <div class="flow-time-text">13:50<br>〜15:00</div>
+      </div>
+      <div class="flow-body">
+        <h3>午後体操 → レク</h3>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-icon">🪟</div>
+            <div class="process-label">換気</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🏋️</div>
+            <div class="process-label">体操<br><small>約20分</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">👄</div>
+            <div class="process-label">口腔体操<br><small>パタカラ</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🎲</div>
+            <div class="process-label">レク活動</div>
+          </div>
+        </div>
+        <p class="see-also">👉 体操の詳しい手順は <a href="#ch5">第5章</a> を見てください</p>
+      </div>
+    </div>
+
+    <div class="flow-arrow">▼</div>
+
+    <!-- おやつ〜帰宅 -->
+    <div class="visual-flow-card">
+      <div class="flow-time">
+        <div class="flow-time-icon">🏠</div>
+        <div class="flow-time-text">15:00<br>〜16:30</div>
+      </div>
+      <div class="flow-body">
+        <h3>おやつ → 帰宅</h3>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-icon">🍡</div>
+            <div class="process-label">おやつ<br><small>15:00</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">💪</div>
+            <div class="process-label">ボケたら<br>あかん体操<br><small>15:55</small></div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">👋</div>
+            <div class="process-label">帰宅準備</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🚗</div>
+            <div class="process-label">送迎</div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="process-icon">🧹</div>
+            <div class="process-label">片付け<br><small>消毒</small></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 第2章 -->
+  <!-- ========== 第2章 生活相談員業務 ========== -->
   <section id="ch2" class="chapter">
-    <h2>第2章 生活相談員業務（スケジュール管理・事務）</h2>
+    <h2>📋 第2章 生活相談員業務</h2>
 
-    <div id="ch2-1" class="subsection">
-      <h3>2.1 週次業務（毎週金曜日）</h3>
-      <p>毎週金曜日に、翌週分の以下の書類を作成・配布する。</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>書類名</th><th>配布先</th><th>備考</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>利用者週間スケジュール表</td><td>デイ・厨房・ホーム</td><td>翌週の利用者予定</td></tr>
-          <tr><td>バイタル記録表</td><td>デイ</td><td>測定記録用</td></tr>
-          <tr><td>週間入浴種別一覧表</td><td>デイ</td><td>一般浴・リフト浴等の区分</td></tr>
-        </tbody>
-      </table>
+    <!-- 週次業務 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <span class="visual-card-badge">毎週金曜日</span>
+        <h3>📅 週次業務</h3>
+      </div>
+      <div class="delivery-diagram">
+        <div class="delivery-from">
+          <div class="delivery-icon">📝</div>
+          <strong>作成する書類</strong>
+        </div>
+        <div class="delivery-items">
+          <div class="delivery-item">
+            <div class="delivery-doc">📊 週間スケジュール表</div>
+            <div class="delivery-to">→ デイ・厨房・ホーム</div>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-doc">🌡️ バイタル記録表</div>
+            <div class="delivery-to">→ デイ</div>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-doc">🛁 入浴種別一覧表</div>
+            <div class="delivery-to">→ デイ</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="ch2-2" class="subsection">
-      <h3>2.2 月次業務</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>時期</th><th>業務内容</th><th>詳細</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>12日〜19日</td><td>希望休受付</td><td>職員の希望休を受け付ける（2日間まで優先）</td></tr>
-          <tr><td>25日前後</td><td>勤務表作成・配布</td><td>翌月の勤務表を作成し全職員に配布</td></tr>
-          <tr><td>20日以降</td><td>カンファレンス実施</td><td>社長、ホーム主任が参加。利用者の状態・ケア方針を共有</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="ch2-3" class="subsection">
-      <h3>2.3 月末処理</h3>
-      <ul>
-        <li>翌月の週間プラン・月間プランを作成する</li>
-        <li>月初にプランを保存する</li>
-        <li>利用日変更に伴う食せんを厨房へ提出する</li>
-        <li>担当ケアマネジャーへ以下の書類を配布する:
-          <ul>
-            <li>サービス提供状況報告書</li>
-            <li>計画書</li>
-            <li>モニタリング</li>
-          </ul>
-        </li>
-      </ul>
+    <!-- 月次業務 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <span class="visual-card-badge">毎月</span>
+        <h3>📆 月次業務カレンダー</h3>
+      </div>
+      <div class="month-timeline">
+        <div class="month-item">
+          <div class="month-date">12日〜19日</div>
+          <div class="month-icon">✋</div>
+          <div class="month-task">希望休受付<br><small>2日間まで優先</small></div>
+        </div>
+        <div class="month-connector">───</div>
+        <div class="month-item">
+          <div class="month-date">20日以降</div>
+          <div class="month-icon">🗣️</div>
+          <div class="month-task">カンファレンス<br><small>社長・ホーム主任参加</small></div>
+        </div>
+        <div class="month-connector">───</div>
+        <div class="month-item">
+          <div class="month-date">25日前後</div>
+          <div class="month-icon">📄</div>
+          <div class="month-task">勤務表<br><small>作成・配布</small></div>
+        </div>
+        <div class="month-connector">───</div>
+        <div class="month-item">
+          <div class="month-date">月末</div>
+          <div class="month-icon">📦</div>
+          <div class="month-task">プラン作成<br><small>食せん提出・報告書配布</small></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 第3章 -->
+  <!-- ========== 第3章 記録・システム入力 ========== -->
   <section id="ch3" class="chapter">
-    <h2>第3章 記録業務・システム入力</h2>
+    <h2>📱 第3章 記録・システム入力</h2>
 
-    <div id="ch3-1" class="subsection">
-      <h3>3.1 デイリー入力（タブレット操作）</h3>
-      <p>毎日の業務終了後、タブレットから以下の項目を入力・保存する。</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>入力項目</th><th>内容</th><th>注意事項</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>出欠</td><td>出席/欠席/中止</td><td>理由も記載する</td></tr>
-          <tr><td>バイタル</td><td>体温・血圧・脈拍</td><td>異常値は特記事項にも記載</td></tr>
-          <tr><td>入浴</td><td>一般浴/リフト浴/非実施</td><td>非実施の場合は理由を記載</td></tr>
-          <tr><td>排泄</td><td>排尿・排便の回数・状態</td><td>パット確認の結果も記載</td></tr>
-          <tr><td>食事</td><td>主食・副食の摂取量</td><td>形態（普通・刻み・ミキサー・粥）を確認</td></tr>
-          <tr><td>レク</td><td>実施状況と特記（様子）</td><td>参加状況・表情なども記録</td></tr>
-        </tbody>
-      </table>
+    <!-- タブレット入力 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>📱 タブレット入力（毎日）</h3>
+      </div>
+      <div class="input-grid">
+        <div class="input-item">
+          <div class="input-icon">✅</div>
+          <div class="input-label">出欠</div>
+          <div class="input-detail">出席/欠席/中止</div>
+        </div>
+        <div class="input-item">
+          <div class="input-icon">🌡️</div>
+          <div class="input-label">バイタル</div>
+          <div class="input-detail">体温・血圧・脈拍</div>
+        </div>
+        <div class="input-item">
+          <div class="input-icon">🛁</div>
+          <div class="input-label">入浴</div>
+          <div class="input-detail">一般/リフト/非実施</div>
+        </div>
+        <div class="input-item">
+          <div class="input-icon">🚻</div>
+          <div class="input-label">排泄</div>
+          <div class="input-detail">回数・状態</div>
+        </div>
+        <div class="input-item">
+          <div class="input-icon">🍽️</div>
+          <div class="input-label">食事</div>
+          <div class="input-detail">主食・副食の量</div>
+        </div>
+        <div class="input-item">
+          <div class="input-icon">🎲</div>
+          <div class="input-label">レク</div>
+          <div class="input-detail">実施内容・様子</div>
+        </div>
+      </div>
     </div>
 
-    <div id="ch3-2" class="subsection">
-      <h3>3.2 AppSheet入力（ホーム連携）</h3>
-      <p>ホームとの情報共有のため、AppSheetアプリで以下を入力する。</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>項目</th><th>入力方法</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>バイタル</td><td>通常入力</td></tr>
-          <tr><td>入浴</td><td>通常入力</td></tr>
-          <tr><td>食事</td><td>追加記録で対応</td></tr>
-          <tr><td>薬</td><td>通常入力</td></tr>
-          <tr><td>排便</td><td><strong>新規記録</strong>で入力</td></tr>
-          <tr><td>排尿</td><td>追加記録で対応</td></tr>
-        </tbody>
-      </table>
-      <div class="alert alert-info">
-        <strong>ポイント:</strong> 排便は「新規記録」、排尿・食事は「追加記録」で入力する点に注意してください。
+    <!-- AppSheet -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>📲 AppSheet入力（ホーム連携）</h3>
+      </div>
+      <div class="appsheet-diagram">
+        <div class="appsheet-col">
+          <div class="appsheet-type new">新規記録</div>
+          <div class="appsheet-items">
+            <span>💩 排便</span>
+          </div>
+        </div>
+        <div class="appsheet-col">
+          <div class="appsheet-type add">追加記録</div>
+          <div class="appsheet-items">
+            <span>🚻 排尿</span>
+            <span>🍽️ 食事</span>
+          </div>
+        </div>
+        <div class="appsheet-col">
+          <div class="appsheet-type normal">通常入力</div>
+          <div class="appsheet-items">
+            <span>🌡️ バイタル</span>
+            <span>🛁 入浴</span>
+            <span>💊 薬</span>
+          </div>
+        </div>
+      </div>
+      <div class="alert-visual alert-visual-info" style="margin-top:12px;">
+        <div class="alert-visual-icon">💡</div>
+        <div class="alert-visual-body">排便は「<strong>新規記録</strong>」で入力！ 排尿・食事は「<strong>追加記録</strong>」</div>
       </div>
     </div>
   </section>
 
-  <!-- 第4章 -->
+  <!-- ========== 第4章 個別ケア・食事 ========== -->
   <section id="ch4" class="chapter">
-    <h2>第4章 個別ケア・食事・おやつ</h2>
+    <h2>🍽️ 第4章 個別ケア・食事・おやつ</h2>
 
-    <div id="ch4-1" class="subsection">
-      <h3>4.1 食事・おやつ形態の管理</h3>
-      <p>利用者ごとに食事・おやつの提供形態が異なります。必ず「おやつ形態一覧表」を確認してから提供してください。</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>形態</th><th>説明</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>普通</td><td>通常の形態でそのまま提供</td></tr>
-          <tr><td>刻み</td><td>細かく刻んで提供（咀嚼機能低下の方）</td></tr>
-          <tr><td>ミキサー</td><td>ミキサーにかけてペースト状に（嚥下機能低下の方）</td></tr>
-          <tr><td>粥</td><td>主食を粥に変更して提供</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="ch4-2" class="subsection">
-      <h3>4.2 入浴介助の個別対応</h3>
-      <p>利用者の身体的特徴・既往歴を把握し、安全な入浴介助を行ってください。</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>注意項目</th><th>対応</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>左目視力なし</td><td>左側からの声かけ・誘導に配慮。浴室内での左側からの接近に注意</td></tr>
-          <tr><td>心臓疾患あり</td><td>湯温・入浴時間に注意。急な温度変化を避ける</td></tr>
-          <tr><td>手足の冷え</td><td>事前に足浴等で温める。湯温を確認してから入浴</td></tr>
-          <tr><td>難聴</td><td>大きな声でゆっくり声かけ。ジェスチャーを併用</td></tr>
-          <tr><td>リュウマチ</td><td>関節への負担に注意。ゆっくりとした介助</td></tr>
-          <tr><td>逆流性食道炎</td><td>食後すぐの入浴を避ける</td></tr>
-          <tr><td>携帯酸素使用</td><td>入浴時は在宅酸素の機械に切り替える</td></tr>
-          <tr><td>パット使用</td><td>パットの確認（濡れていることがある）。交換を行う</td></tr>
-        </tbody>
-      </table>
-      <h4>洗体の順番</h4>
-      <p>利用者の状態に応じて、以下の部位を丁寧に洗う:</p>
-      <ul>
-        <li>胸 → 背中 → 前側 → 下肢（指の趾間）→ 陰部</li>
-      </ul>
-    </div>
-
-    <div id="ch4-3" class="subsection">
-      <h3>4.3 イベント・外出レクの注意点</h3>
-      <div class="alert alert-warning">
-        <strong>外出レク（ドライブ等）の注意事項（過去の改善点を反映）:</strong>
-        <ul>
-          <li>乗り物酔い対策として、酔い止め薬を事前に準備する</li>
-          <li>出発・到着の時間を厳守する</li>
-          <li>水分補給用の飲料を事前に準備する</li>
-          <li>トイレの場所を事前に確認しておく</li>
-        </ul>
+    <!-- 食事形態 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>🍚 食事・おやつの形態</h3>
       </div>
-      <h4>カラオケレクで使用する曲目の例</h4>
-      <ul>
-        <li>北海盆唄</li>
-        <li>千曲川</li>
-        <li>その他利用者のリクエスト曲</li>
-      </ul>
+      <div class="food-types">
+        <div class="food-type">
+          <div class="food-icon-large">🍚</div>
+          <div class="food-name">普通</div>
+          <div class="food-desc">そのまま提供</div>
+        </div>
+        <div class="food-type">
+          <div class="food-icon-large">🔪</div>
+          <div class="food-name">刻み</div>
+          <div class="food-desc">細かく刻む</div>
+        </div>
+        <div class="food-type">
+          <div class="food-icon-large">🥤</div>
+          <div class="food-name">ミキサー</div>
+          <div class="food-desc">ペースト状</div>
+        </div>
+        <div class="food-type">
+          <div class="food-icon-large">🥣</div>
+          <div class="food-name">粥（おかゆ）</div>
+          <div class="food-desc">主食をお粥に</div>
+        </div>
+      </div>
+      <div class="alert-visual alert-visual-warning" style="margin-top:12px;">
+        <div class="alert-visual-icon">⚠️</div>
+        <div class="alert-visual-body">提供前に必ず「<strong>おやつ形態一覧表</strong>」で確認すること！</div>
+      </div>
+    </div>
+
+    <!-- 入浴個別対応 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>🛁 入浴介助の注意点</h3>
+      </div>
+      <div class="caution-cards">
+        <div class="caution-card">
+          <div class="caution-icon">👁️</div>
+          <div class="caution-text"><strong>左目視力なし</strong><br>左側からの声かけに注意</div>
+        </div>
+        <div class="caution-card">
+          <div class="caution-icon">❤️</div>
+          <div class="caution-text"><strong>心臓疾患</strong><br>湯温・入浴時間に注意<br>急な温度変化を避ける</div>
+        </div>
+        <div class="caution-card">
+          <div class="caution-icon">🥶</div>
+          <div class="caution-text"><strong>手足の冷え</strong><br>足浴で事前に温める</div>
+        </div>
+        <div class="caution-card">
+          <div class="caution-icon">👂</div>
+          <div class="caution-text"><strong>難聴</strong><br>大きな声でゆっくり<br>ジェスチャーも使う</div>
+        </div>
+        <div class="caution-card">
+          <div class="caution-icon">🦴</div>
+          <div class="caution-text"><strong>リュウマチ</strong><br>関節に負担かけない<br>ゆっくり介助</div>
+        </div>
+        <div class="caution-card">
+          <div class="caution-icon">🫁</div>
+          <div class="caution-text"><strong>酸素使用者</strong><br>入浴時は在宅酸素<br>に切り替え</div>
+        </div>
+      </div>
+
+      <!-- 洗体順番の図解 -->
+      <h4 style="margin-top:20px;color:var(--primary-dark);">洗体の順番</h4>
+      <div class="wash-order">
+        <div class="wash-step"><span>胸</span></div>
+        <div class="wash-arrow">→</div>
+        <div class="wash-step"><span>背中</span></div>
+        <div class="wash-arrow">→</div>
+        <div class="wash-step"><span>前側</span></div>
+        <div class="wash-arrow">→</div>
+        <div class="wash-step"><span>下肢<br><small>(指の趾間)</small></span></div>
+        <div class="wash-arrow">→</div>
+        <div class="wash-step"><span>陰部</span></div>
+      </div>
+    </div>
+
+    <!-- 外出レク注意 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>🚌 外出レク（ドライブ等）の注意</h3>
+      </div>
+      <div class="alert-visual alert-visual-danger">
+        <div class="alert-visual-icon">🚨</div>
+        <div class="alert-visual-body">
+          <div class="icon-grid" style="gap:12px;">
+            <div class="icon-item">
+              <div class="icon-circle">💊</div>
+              <span>酔い止め薬<br>を準備</span>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">⏰</div>
+              <span>時間を<br>厳守する</span>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">🧃</div>
+              <span>飲み物を<br>準備する</span>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">🚻</div>
+              <span>トイレの場所<br>を事前確認</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 第5章 -->
+  <!-- ========== 第5章 体操・口腔ケア ========== -->
   <section id="ch5" class="chapter">
-    <h2>第5章 体操・口腔ケア・レクリエーション</h2>
-    <p>午後の体操は13:50〜14:10に実施します。以下のプログラムを順番に行ってください。</p>
+    <h2>🤸 第5章 体操・口腔ケア</h2>
+    <p class="chapter-intro">午後の体操（13:50〜14:10）。絵を見ながら声かけしてください。</p>
 
-    <div id="ch5-1" class="subsection">
-      <h3>5.1 午後体操プログラム（上半身）</h3>
-      <table class="data-table exercise-table">
-        <thead>
-          <tr><th>順番</th><th>声かけ（ひらがな）</th><th>内容（スタッフ用）</th><th>回数</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>しんこきゅうをします</td><td>深呼吸を3回します。</td><td>3回</td></tr>
-          <tr><td>2</td><td>くびをまえとうしろにうごかします</td><td>首を前（おへそを見る）後ろ（天井を見る）と動かします。</td><td>3回ずつ</td></tr>
-          <tr><td>3</td><td>くびをみぎひだりにうごかします</td><td>首を右に向けます。首を左に向けます。</td><td>3回ずつ</td></tr>
-          <tr><td>4</td><td>くびをまよこにむけます</td><td>首を右に傾け5秒間とめます。首を左に傾け5秒間とめます。</td><td>3回ずつ</td></tr>
-          <tr><td>5</td><td>かたのあげさげをします</td><td>首を回します。5回ほど回したのち反対に回します。</td><td>10回</td></tr>
-          <tr><td>6</td><td>かたをまわします うしろに5かい</td><td>肩の上げ下げをします。</td><td>前後10回ずつ</td></tr>
-          <tr><td>7</td><td>てをくんでじょうはんしんをねじります</td><td>上半身をねじります。手を組むか肘置きを持って、左右5秒間ずつ。</td><td>3セット</td></tr>
-          <tr><td>8</td><td>おやゆびをにぎってぐーをつくります</td><td>手を斜め上方にあげ、胸を張るように後ろまで引きます。手を後ろに組んで上げ下げ。</td><td>10回</td></tr>
-          <tr><td>9</td><td>ひじからさきのくっしんをします</td><td>親指を中に握り肘から先の屈曲をします。片方は伸ばした状態で交わします。</td><td>10回/15回</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="ch5-2" class="subsection">
-      <h3>5.2 午後体操プログラム（下半身）</h3>
-      <table class="data-table exercise-table">
-        <thead>
-          <tr><th>順番</th><th>声かけ（ひらがな）</th><th>内容（スタッフ用）</th><th>回数</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>あしをかるくたたくかまっさーじをします</td><td>息を吐きながら前かがみになり両手で足の甲を触ります。</td><td>3回</td></tr>
-          <tr><td>2</td><td>あきれすけんをのばします</td><td>右足を水平に上げて10秒間保ちます。左右行います。</td><td>5回×2セット</td></tr>
-          <tr><td>3</td><td>あしをちゅうにあげてください</td><td>足首を回します。右回し左回し各5回ずつ。</td><td>左右各5回</td></tr>
-          <tr><td>4</td><td>つまさきあげとかかとあげ</td><td>つま先を10回上げ下げ。かかとを10回上げ下げ。かかと上げ5秒×5セット。</td><td>各10回</td></tr>
-          <tr><td>5</td><td>あるくのでうでをふってください</td><td>腕を振って足を合わせます。ゆっくりで15歩歩きます。</td><td>10〜15歩</td></tr>
-          <tr><td>6</td><td>あしを5びょうかんはやくうごかします</td><td>バタ足を5秒間行います。</td><td>2セット</td></tr>
-          <tr><td>7</td><td>しんこきゅうをします</td><td>深呼吸をします。</td><td>3回</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="ch5-3" class="subsection">
-      <h3>5.3 指先・手の運動</h3>
-      <ul>
-        <li>指を組んでゆっくりといろんな方向に回す</li>
-        <li>指折りを10回行い、だんだん早くする</li>
-        <li>グーチョキパーを5回、逆（パーチョキグー）を5回</li>
-        <li>合掌して指先を押し付け、指を順番に離して回す（反対回しも）</li>
-        <li>手首を縦・横に動かし、回す</li>
-        <li>左右違う動き（右手グー縦/左手パー前後）を入れ替える</li>
-      </ul>
-    </div>
-
-    <div id="ch5-4" class="subsection">
-      <h3>5.4 口腔体操</h3>
-      <table class="data-table exercise-table">
-        <thead>
-          <tr><th>順番</th><th>声かけ</th><th>内容</th><th>回数</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>あくびをします</td><td>大きく口を開けてあくびの動作</td><td>—</td></tr>
-          <tr><td>2</td><td>くちのなかにくうきをいれてふくらまします</td><td>口の中に空気をパンパンに入れて膨らます</td><td>—</td></tr>
-          <tr><td>3</td><td>5びょうかんとめます</td><td>空気を漏らさないよう口をチャックして5秒間止める</td><td>2セット</td></tr>
-          <tr><td>4</td><td>くちのなかのくうきをぬくようにすぼめます</td><td>口をすぼめて空気を抜く。5秒間止める。</td><td>2セット</td></tr>
-          <tr><td>5</td><td>したでくちびるをなめます</td><td>舌で唇をなめる</td><td>—</td></tr>
-          <tr><td>6</td><td>したではのまえがわをそうじします</td><td>舌で歯の前側を掃除する</td><td>—</td></tr>
-          <tr><td>7</td><td>したではのうらがわをそうじします</td><td>舌で歯の裏側を掃除する</td><td>—</td></tr>
-          <tr><td>8</td><td>したでほっぺをおしだします</td><td>舌で頬を右左と交互に押し出す</td><td>左右交互</td></tr>
-        </tbody>
-      </table>
-      <h4>発声練習（パタカラ体操）</h4>
-      <div class="patakara-box">
-        <div class="patakara-item"><span class="patakara-char">ぱ</span> ぱ ぱ ぱ ぱ（5回）</div>
-        <div class="patakara-item"><span class="patakara-char">た</span> た た た た（5回）</div>
-        <div class="patakara-item"><span class="patakara-char">か</span> か か か か（5回）</div>
-        <div class="patakara-item"><span class="patakara-char">ら</span> ら ら ら ら（5回）</div>
-        <div class="patakara-item"><span class="patakara-char">ぱたから</span> を続けて5回</div>
+    <!-- 上半身 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <span class="visual-card-badge">上半身</span>
+        <h3>💪 上半身の体操</h3>
       </div>
-      <h4>あいうべ体操</h4>
-      <p>「あいう」まで言って「べー」のところで舌を出します。5回繰り返します。</p>
-      <h4>唾液腺マッサージ</h4>
-      <p>唾液腺マッサージを行い、唾を飲み込む練習をします（2回飲み込み）。</p>
-      <p>最後に3回深呼吸をして終了します。</p>
+      <div class="exercise-visual-list">
+        <div class="exercise-visual-item">
+          <div class="exercise-num">1</div>
+          <div class="exercise-illust">🫁</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「しんこきゅうをします」</div>
+            <div class="exercise-desc">深呼吸 × 3回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">2</div>
+          <div class="exercise-illust">🔄</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「くびをまえとうしろにうごかします」</div>
+            <div class="exercise-desc">おへそを見る ↔ 天井を見る × 3回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">3</div>
+          <div class="exercise-illust">↔️</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「くびをみぎひだりにうごかします」</div>
+            <div class="exercise-desc">右を向く ↔ 左を向く × 3回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">4</div>
+          <div class="exercise-illust">↗️</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「くびをまよこにむけます」</div>
+            <div class="exercise-desc">右に傾け5秒 ↔ 左に傾け5秒 × 3回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">5</div>
+          <div class="exercise-illust">🔃</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「かたのあげさげをします」</div>
+            <div class="exercise-desc">首を回す 5回 → 反対回し 5回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">6</div>
+          <div class="exercise-illust">🔁</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「かたをまわします」</div>
+            <div class="exercise-desc">前回し10回 → 後ろ回し10回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">7</div>
+          <div class="exercise-illust">🌀</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「じょうはんしんをねじります」</div>
+            <div class="exercise-desc">左右に5秒ずつ × 3セット</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下半身 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <span class="visual-card-badge">下半身</span>
+        <h3>🦵 下半身の体操</h3>
+      </div>
+      <div class="exercise-visual-list">
+        <div class="exercise-visual-item">
+          <div class="exercise-num">1</div>
+          <div class="exercise-illust">🦶</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「あしをかるくたたきます」</div>
+            <div class="exercise-desc">前かがみで足の甲を触る × 3回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">2</div>
+          <div class="exercise-illust">🦿</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「あきれすけんをのばします」</div>
+            <div class="exercise-desc">足を水平に上げて10秒 × 左右5回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">3</div>
+          <div class="exercise-illust">🔄</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「あしくびをまわします」</div>
+            <div class="exercise-desc">右回し・左回し × 各5回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">4</div>
+          <div class="exercise-illust">⬆️</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「つまさきあげ・かかとあげ」</div>
+            <div class="exercise-desc">つま先10回 + かかと10回</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">5</div>
+          <div class="exercise-illust">🚶</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「あるきます」</div>
+            <div class="exercise-desc">腕を振って15歩</div>
+          </div>
+        </div>
+        <div class="exercise-visual-item">
+          <div class="exercise-num">6</div>
+          <div class="exercise-illust">🫁</div>
+          <div class="exercise-info">
+            <div class="exercise-voice">「しんこきゅうをします」</div>
+            <div class="exercise-desc">深呼吸 × 3回で終了</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 口腔体操 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>👄 口腔体操（パタカラ・あいうべ）</h3>
+      </div>
+
+      <div class="oral-exercise-grid">
+        <div class="oral-step">
+          <div class="oral-icon">😮</div>
+          <div>あくびをする</div>
+        </div>
+        <div class="oral-step">
+          <div class="oral-icon">🎈</div>
+          <div>口を膨らます</div>
+        </div>
+        <div class="oral-step">
+          <div class="oral-icon">😗</div>
+          <div>口をすぼめる</div>
+        </div>
+        <div class="oral-step">
+          <div class="oral-icon">👅</div>
+          <div>舌で唇をなめる</div>
+        </div>
+        <div class="oral-step">
+          <div class="oral-icon">🦷</div>
+          <div>舌で歯を掃除</div>
+        </div>
+        <div class="oral-step">
+          <div class="oral-icon">😝</div>
+          <div>舌で頬を押す<br><small>左右交互</small></div>
+        </div>
+      </div>
+
+      <!-- パタカラ -->
+      <h4 style="margin-top:20px;color:var(--primary-dark);">🗣️ パタカラ体操（大きな声で！）</h4>
+      <div class="patakara-visual">
+        <div class="patakara-big">ぱ ぱ ぱ ぱ ぱ</div>
+        <div class="patakara-big">た た た た た</div>
+        <div class="patakara-big">か か か か か</div>
+        <div class="patakara-big">ら ら ら ら ら</div>
+        <div class="patakara-combined">ぱたから × 5回</div>
+      </div>
+
+      <!-- あいうべ -->
+      <h4 style="margin-top:20px;color:var(--primary-dark);">👅 あいうべ体操（5回）</h4>
+      <div class="aiube-visual">
+        <div class="aiube-step">あ</div>
+        <div class="aiube-arrow">→</div>
+        <div class="aiube-step">い</div>
+        <div class="aiube-arrow">→</div>
+        <div class="aiube-step">う</div>
+        <div class="aiube-arrow">→</div>
+        <div class="aiube-step accent">べー👅</div>
+      </div>
+
+      <div class="mini-note" style="margin-top:16px;">
+        <span class="mini-note-icon">💧</span>
+        <span>最後に唾液腺マッサージ → ごっくん（2回飲み込み）→ 深呼吸3回</span>
+      </div>
     </div>
   </section>
 
-  <!-- 第6章 -->
+  <!-- ========== 第6章 緊急時・感染症 ========== -->
   <section id="ch6" class="chapter">
-    <h2>第6章 緊急時対応・感染症対策・通院</h2>
+    <h2>🏥 第6章 緊急時・感染症対策・通院</h2>
 
-    <div id="ch6-1" class="subsection">
-      <h3>6.1 感染症発生時の対応</h3>
-      <div class="alert alert-danger">
-        <strong>感染症（コロナ等）発生時のフロー:</strong>
-        <ol>
-          <li>A棟・B棟の隔離対応を行う</li>
-          <li>該当者は居室での食事対応に切り替える（弁当等）</li>
-          <li>消毒を徹底する</li>
-          <li>発症から<strong>14日間</strong>経過を目安に解放する</li>
-          <li>関係機関（保健所等）に報告する</li>
-        </ol>
+    <!-- 感染症 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>🦠 感染症（コロナ等）が発生したら</h3>
+      </div>
+      <div class="emergency-flow">
+        <div class="emergency-step">
+          <div class="emergency-num">1</div>
+          <div class="emergency-icon">🏠</div>
+          <div class="emergency-label">A棟・B棟を<br><strong>隔離</strong></div>
+        </div>
+        <div class="emergency-arrow">▶</div>
+        <div class="emergency-step">
+          <div class="emergency-num">2</div>
+          <div class="emergency-icon">🍱</div>
+          <div class="emergency-label">居室で<br><strong>食事対応</strong></div>
+        </div>
+        <div class="emergency-arrow">▶</div>
+        <div class="emergency-step">
+          <div class="emergency-num">3</div>
+          <div class="emergency-icon">🧴</div>
+          <div class="emergency-label"><strong>消毒</strong>を<br>徹底</div>
+        </div>
+        <div class="emergency-arrow">▶</div>
+        <div class="emergency-step">
+          <div class="emergency-num">4</div>
+          <div class="emergency-icon">📅</div>
+          <div class="emergency-label"><strong>14日間</strong><br>経過で解放</div>
+        </div>
+        <div class="emergency-arrow">▶</div>
+        <div class="emergency-step">
+          <div class="emergency-num">5</div>
+          <div class="emergency-icon">📞</div>
+          <div class="emergency-label">保健所に<br><strong>報告</strong></div>
+        </div>
       </div>
     </div>
 
-    <div id="ch6-2" class="subsection">
-      <h3>6.2 担当医院一覧と通院対応</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>医院名</th><th>利用者</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>金田医院</strong></td>
-            <td>梅田美利様、大西カヨ子様、小手川紘様、佐藤幸蔵様、祖田スミコ様、戸高日出子様、中津留和昭様、野中冨士子様</td>
-          </tr>
-          <tr>
-            <td><strong>大石医院</strong></td>
-            <td>亀井小夜子様、戸高キクエ様</td>
-          </tr>
-          <tr>
-            <td><strong>小田クリニック</strong></td>
-            <td>中岡ミサヲ様</td>
-          </tr>
-
-          <tr>
-            <td><strong>小宅医院</strong></td>
-            <td>廣戸トミ様</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="alert alert-info">
-        <strong>通院対応のポイント:</strong> 各医院の診療時間（特に土曜の午前中のみの場合）を事前に確認すること。通院時は担当者が付き添い、結果を記録すること。
+    <!-- 担当医院 -->
+    <div class="visual-card">
+      <div class="visual-card-header">
+        <h3>🏥 担当医院一覧</h3>
+      </div>
+      <div class="hospital-cards">
+        <div class="hospital-card">
+          <div class="hospital-name">🏥 金田医院</div>
+          <div class="hospital-patients">梅田美利様、大西カヨ子様、小手川紘様、佐藤幸蔵様、祖田スミコ様、戸高日出子様、中津留和昭様、野中冨士子様</div>
+        </div>
+        <div class="hospital-card">
+          <div class="hospital-name">🏥 大石医院</div>
+          <div class="hospital-patients">亀井小夜子様、戸高キクエ様</div>
+        </div>
+        <div class="hospital-card">
+          <div class="hospital-name">🏥 小田クリニック</div>
+          <div class="hospital-patients">中岡ミサヲ様</div>
+        </div>
+        <div class="hospital-card">
+          <div class="hospital-name">🏥 小宅医院</div>
+          <div class="hospital-patients">廣戸トミ様</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 帳票セクション ===== -->
+  <!-- ===== 帳票セクション（以下は印刷用なのでシンプル） ===== -->
 
-  <!-- 帳票: 週間スケジュール表 -->
   <section id="print-schedule" class="chapter printable-section">
     <div class="print-header">
-      <h2>週間スケジュール表 / 入浴種別一覧表</h2>
-      <button class="print-btn no-print" onclick="printSection('print-schedule')">印刷 / PDF保存</button>
+      <h2>📅 週間スケジュール表 / 入浴種別一覧表</h2>
+      <button class="print-btn no-print" onclick="printSection('print-schedule')">🖨️ 印刷 / PDF保存</button>
     </div>
-    <p class="no-print">下のボタンまたは Ctrl+P（Cmd+P）で印刷・PDF保存できます。</p>
-
     <h3>週間利用者スケジュール表</h3>
     <table class="print-table">
-      <thead>
-        <tr><th>No.</th><th>利用者名</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>備考</th></tr>
-      </thead>
+      <thead><tr><th>No.</th><th>利用者名</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>備考</th></tr></thead>
       <tbody>
         <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -582,275 +898,122 @@
         <tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       </tbody>
     </table>
-
     <div class="page-break"></div>
-
     <h3>週間入浴種別一覧表</h3>
     <table class="print-table">
-      <thead>
-        <tr><th>No.</th><th>利用者名</th><th>入浴種別</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>注意事項</th></tr>
-      </thead>
+      <thead><tr><th>No.</th><th>利用者名</th><th>入浴種別</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>注意事項</th></tr></thead>
       <tbody>
         <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       </tbody>
     </table>
-    <p class="print-note">※ 入浴種別: 一般浴 / リフト浴 / 非実施（清拭等）</p>
   </section>
 
-  <!-- 帳票: 座席表 -->
   <section id="print-seating" class="chapter printable-section">
     <div class="print-header">
-      <h2>座席表（曜日別レイアウト）</h2>
-      <button class="print-btn no-print" onclick="printSection('print-seating')">印刷 / PDF保存</button>
+      <h2>💺 座席表（曜日別）</h2>
+      <button class="print-btn no-print" onclick="printSection('print-seating')">🖨️ 印刷 / PDF保存</button>
     </div>
-    <p class="no-print">Excelデータに基づく曜日別の座席配置です。</p>
-
     <div class="seating-grid">
       <div class="day-seating">
         <h3>月曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
-            <div class="seat">中岡ミサヲ様</div>
+          <div class="seating-area tatami"><h4>畳</h4><div class="seat">中岡ミサヲ様</div></div>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">野中様</div></div>
+            <div class="seat-row"><div class="seat">大西様</div></div>
+            <div class="seat-row"><div class="seat">小手川様</div></div>
+            <div class="seat-row"><div class="seat">廣戸様</div><div class="seat">中村様</div></div>
+            <div class="seat-row"><div class="seat">山内様</div><div class="seat">戸高様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">野中様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">大西様</div>
-
-            </div>
-            <div class="seat-row">
-              <div class="seat">小手川様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">廣戸様</div>
-              <div class="seat">中村様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">山内様</div>
-              <div class="seat">戸高様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">廣戸様</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">廣戸様</div></div>
         </div>
       </div>
-
       <div class="day-seating">
         <h3>火曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
-            <div class="seat">戸高キクエ様</div>
+          <div class="seating-area tatami"><h4>畳</h4><div class="seat">戸高キクエ様</div></div>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">山本様</div><div class="seat">亀井様</div></div>
+            <div class="seat-row"><div class="seat">戸高様</div></div>
+            <div class="seat-row"><div class="seat">廣戸様</div><div class="seat">中津留様</div></div>
+            <div class="seat-row"><div class="seat">梅田様</div><div class="seat">小手川様</div></div>
+            <div class="seat-row"><div class="seat">祖田様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">山本様</div>
-              <div class="seat">亀井様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">戸高様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">廣戸様</div>
-              <div class="seat">中津留様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">梅田様</div>
-              <div class="seat">小手川様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">祖田様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">—</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">—</div></div>
         </div>
       </div>
-
       <div class="day-seating">
         <h3>水曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
-            <div class="seat">中岡ミサヲ様</div>
+          <div class="seating-area tatami"><h4>畳</h4><div class="seat">中岡ミサヲ様</div></div>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">野中様</div></div>
+            <div class="seat-row"><div class="seat">大西様</div></div>
+            <div class="seat-row"><div class="seat">梅田様</div></div>
+            <div class="seat-row"><div class="seat">廣戸様</div><div class="seat">山内様</div></div>
+            <div class="seat-row"><div class="seat">戸高様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">野中様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">大西様</div>
-
-            </div>
-            <div class="seat-row">
-              <div class="seat">梅田様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">廣戸様</div>
-              <div class="seat">山内様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">戸高様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">—</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">—</div></div>
         </div>
       </div>
-
       <div class="day-seating">
         <h3>木曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">野中様</div></div>
+            <div class="seat-row"><div class="seat">大西様</div></div>
+            <div class="seat-row"><div class="seat">戸高様</div><div class="seat">亀井様</div></div>
+            <div class="seat-row"><div class="seat">祖田様</div><div class="seat">廣戸様</div></div>
+            <div class="seat-row"><div class="seat">梅田様</div></div>
+            <div class="seat-row"><div class="seat">小手川様</div><div class="seat">中津留様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">野中様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">大西様</div>
-
-            </div>
-            <div class="seat-row">
-              <div class="seat">戸高様</div>
-              <div class="seat">亀井様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">祖田様</div>
-              <div class="seat">廣戸様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">梅田様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">小手川様</div>
-              <div class="seat">中津留様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">—</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">—</div></div>
         </div>
       </div>
-
       <div class="day-seating">
         <h3>金曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
-            <div class="seat">—</div>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">野中様</div></div>
+            <div class="seat-row"><div class="seat">中岡ミサヲ様</div></div>
+            <div class="seat-row"><div class="seat">中津留様</div></div>
+            <div class="seat-row"><div class="seat">廣戸様</div></div>
+            <div class="seat-row"><div class="seat">山内様</div><div class="seat">戸高様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">野中様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">中岡ミサヲ様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">中津留様</div>
-
-            </div>
-            <div class="seat-row">
-              <div class="seat">廣戸様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">山内様</div>
-              <div class="seat">戸高様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">—</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">—</div></div>
         </div>
       </div>
-
       <div class="day-seating">
         <h3>土曜日</h3>
         <div class="seating-layout">
-          <div class="seating-area tatami">
-            <h4>畳（和室）</h4>
+          <div class="seating-area table-area"><h4>テーブル</h4>
+            <div class="seat-row"><div class="seat">野中様</div></div>
+            <div class="seat-row"><div class="seat">大西様</div></div>
+            <div class="seat-row"><div class="seat">山本様</div><div class="seat">廣戸様</div></div>
+            <div class="seat-row"><div class="seat">亀井様</div></div>
+            <div class="seat-row"><div class="seat">戸高様</div><div class="seat">祖田様</div></div>
+            <div class="seat-row"><div class="seat">梅田様</div><div class="seat">小手川様</div></div>
+            <div class="seat-row"><div class="seat">中津留様</div></div>
           </div>
-          <div class="seating-area table-area">
-            <h4>テーブル</h4>
-            <div class="seat-row">
-              <div class="seat">野中様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">大西様</div>
-
-            </div>
-            <div class="seat-row">
-              <div class="seat">山本様</div>
-              <div class="seat">廣戸様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">亀井様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">戸高様</div>
-              <div class="seat">祖田様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">梅田様</div>
-              <div class="seat">小手川様</div>
-            </div>
-            <div class="seat-row">
-              <div class="seat">中津留様</div>
-            </div>
-          </div>
-          <div class="seating-area bed-area">
-            <h4>ベッド</h4>
-            <div class="seat">—</div>
-          </div>
+          <div class="seating-area bed-area"><h4>ベッド</h4><div class="seat">—</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 帳票: 誕生日一覧 -->
   <section id="print-birthday" class="chapter printable-section">
     <div class="print-header">
-      <h2>月別誕生日一覧表</h2>
-      <button class="print-btn no-print" onclick="printSection('print-birthday')">印刷 / PDF保存</button>
+      <h2>🎂 月別誕生日一覧表</h2>
+      <button class="print-btn no-print" onclick="printSection('print-birthday')">🖨️ 印刷 / PDF保存</button>
     </div>
     <table class="print-table">
-      <thead>
-        <tr><th>月</th><th>利用者名</th><th>生年月日</th><th>年齢</th><th>備考（好きなもの等）</th></tr>
-      </thead>
+      <thead><tr><th>月</th><th>利用者名</th><th>生年月日</th><th>年齢</th><th>備考</th></tr></thead>
       <tbody>
         <tr><td>1月</td><td></td><td></td><td></td><td></td></tr>
         <tr><td>2月</td><td></td><td></td><td></td><td></td></tr>
@@ -866,21 +1029,17 @@
         <tr><td>12月</td><td></td><td></td><td></td><td></td></tr>
       </tbody>
     </table>
-    <p class="print-note">※ 誕生月にはお祝いイベントを実施します。</p>
   </section>
 
-  <!-- 帳票: おやつ形態一覧 -->
   <section id="print-snack" class="chapter printable-section">
     <div class="print-header">
-      <h2>おやつ形態一覧表</h2>
-      <button class="print-btn no-print" onclick="printSection('print-snack')">印刷 / PDF保存</button>
+      <h2>🍡 おやつ形態一覧表</h2>
+      <button class="print-btn no-print" onclick="printSection('print-snack')">🖨️ 印刷 / PDF保存</button>
     </div>
     <table class="print-table">
-      <thead>
-        <tr><th>No.</th><th>利用者名</th><th>おやつ形態</th><th>食事形態（主食）</th><th>食事形態（副食）</th><th>アレルギー・禁忌</th><th>備考</th></tr>
-      </thead>
+      <thead><tr><th>No.</th><th>利用者名</th><th>おやつ形態</th><th>主食</th><th>副食</th><th>アレルギー</th><th>備考</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td></td><td class="form-select">普通 / 刻み / ミキサー</td><td class="form-select">普通 / 粥</td><td class="form-select">普通 / 刻み / ミキサー</td><td></td><td></td></tr>
+        <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -890,30 +1049,20 @@
         <tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>13</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>15</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       </tbody>
     </table>
-    <p class="print-note">※ 形態区分: 普通 / 刻み / ミキサー / 粥<br>※ 変更がある場合は生活相談員に連絡すること</p>
   </section>
 
-  <!-- 帳票: 病院・服薬一覧 -->
   <section id="print-hospital" class="chapter printable-section">
     <div class="print-header">
-      <h2>利用者病院一覧 / 服薬チェックリスト</h2>
-      <button class="print-btn no-print" onclick="printSection('print-hospital')">印刷 / PDF保存</button>
+      <h2>💊 病院・服薬一覧</h2>
+      <button class="print-btn no-print" onclick="printSection('print-hospital')">🖨️ 印刷 / PDF保存</button>
     </div>
-
-    <h3>利用者担当医院一覧</h3>
+    <h3>担当医院一覧</h3>
     <table class="print-table">
-      <thead>
-        <tr><th>医院名</th><th>No.</th><th>利用者名</th><th>薬剤名</th></tr>
-      </thead>
+      <thead><tr><th>医院名</th><th>No.</th><th>利用者名</th><th>薬剤名</th></tr></thead>
       <tbody>
-        <tr><td rowspan="9"><strong>金田医院</strong></td><td>1</td><td>梅田 美利 様</td><td></td></tr>
+        <tr><td rowspan="8"><strong>金田医院</strong></td><td>1</td><td>梅田 美利 様</td><td></td></tr>
         <tr><td>2</td><td>大西 カヨ子 様</td><td></td></tr>
         <tr><td>3</td><td>小手川 紘 様</td><td></td></tr>
         <tr><td>4</td><td>佐藤 幸蔵 様</td><td></td></tr>
@@ -927,19 +1076,10 @@
         <tr><td><strong>小宅医院</strong></td><td>1</td><td>廣戸 トミ 様</td><td></td></tr>
       </tbody>
     </table>
-
     <div class="page-break"></div>
-
     <h3>服薬チェックリスト</h3>
-    <table class="print-table medication-table">
-      <thead>
-        <tr>
-          <th>利用者名</th>
-          <th>服薬タイミング</th>
-          <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
-          <th>確認者</th>
-        </tr>
-      </thead>
+    <table class="print-table">
+      <thead><tr><th>利用者名</th><th>タイミング</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>確認者</th></tr></thead>
       <tbody>
         <tr><td>野中 冨士子 様</td><td>就寝前</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td rowspan="3">廣戸 トミ 様</td><td>朝食後</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -947,69 +1087,66 @@
         <tr><td>夕食後</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
       </tbody>
     </table>
-    <p class="print-note">※ 服薬確認は黒ペンでチェックすること。確認者のイニシャルを記入すること。</p>
+    <p class="print-note">※ 黒ペンでチェック ✓。確認者のイニシャルを記入。</p>
   </section>
 
-  <!-- 付録: 使用書 -->
+  <!-- 使用書 -->
   <section id="appendix-usage" class="chapter">
-    <h2>付録: 使用書（本マニュアルの使い方）</h2>
+    <h2>📘 使用書（この本の使い方）</h2>
+    <div class="visual-card">
+      <div class="usage-visual">
+        <div class="usage-item">
+          <div class="usage-icon">🆕</div>
+          <div class="usage-text"><strong>新人さんへ</strong><br>最初から順番に読んでください</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-icon">🔍</div>
+          <div class="usage-text"><strong>分からない時</strong><br>目次から探してください</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-icon">🖨️</div>
+          <div class="usage-text"><strong>印刷したい時</strong><br>「印刷/PDF保存」ボタンを押す</div>
+        </div>
+        <div class="usage-item">
+          <div class="usage-icon">📝</div>
+          <div class="usage-text"><strong>変更があった時</strong><br>相談員か管理者が更新します</div>
+        </div>
+      </div>
 
-    <div class="usage-guide">
-      <h3>1. 本マニュアルの目的</h3>
-      <p>本マニュアルは、デイサービスセンターやわらぎの全職員が、日常業務を安全かつ効率的に遂行するための手引きです。新人教育、業務の標準化、サービス品質の維持向上を目的としています。</p>
-
-      <h3>2. 対象者</h3>
-      <ul>
-        <li><strong>新人職員:</strong> 配属時に通読し、業務の全体像を把握してください</li>
-        <li><strong>既存職員:</strong> 業務手順の確認・振り返りに活用してください</li>
-        <li><strong>生活相談員:</strong> 第2章の事務業務フローを中心に参照してください</li>
-        <li><strong>管理者:</strong> 定例会議やカンファレンスの際の参考資料としてください</li>
-      </ul>
-
-      <h3>3. 使い方</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>場面</th><th>参照箇所</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>朝の準備で何をすればよいか分からない</td><td>第1章 1.1 朝の準備</td></tr>
-          <tr><td>利用者の食事形態を確認したい</td><td>第4章 4.1 + おやつ形態一覧表</td></tr>
-          <tr><td>午後の体操の手順を確認したい</td><td>第5章 体操プログラム</td></tr>
-          <tr><td>利用者の担当医院を知りたい</td><td>第6章 6.2 + 病院一覧帳票</td></tr>
-          <tr><td>感染症が発生した</td><td>第6章 6.1 感染症対応</td></tr>
-          <tr><td>翌週のスケジュール表を作成したい</td><td>第2章 2.1 + 週間スケジュール帳票</td></tr>
-          <tr><td>タブレットへの記録方法が分からない</td><td>第3章 記録業務</td></tr>
-          <tr><td>帳票を印刷したい</td><td>各帳票の「印刷 / PDF保存」ボタン</td></tr>
-        </tbody>
-      </table>
-
-      <h3>4. 帳票の印刷・PDF保存方法</h3>
-      <ol>
-        <li>印刷したい帳票セクションに移動する</li>
-        <li>「印刷 / PDF保存」ボタンをクリックする（または <kbd>Ctrl</kbd>+<kbd>P</kbd> / <kbd>Cmd</kbd>+<kbd>P</kbd>）</li>
-        <li>プリンターの選択画面で「PDFとして保存」を選ぶとPDFファイルとして保存できます</li>
-        <li>用紙サイズは <strong>A4</strong> を選択してください</li>
-        <li>印刷時はナビゲーションやボタン等のUI要素は自動的に非表示になります</li>
-      </ol>
-
-      <h3>5. マニュアルの更新ルール</h3>
-      <ul>
-        <li>業務手順に変更があった場合は、速やかに本マニュアルを更新すること</li>
-        <li>更新は生活相談員または管理者が行う</li>
-        <li>更新日を表紙の「最終更新」に反映すること</li>
-        <li>定例会議（毎月20日以降）で変更内容を全職員に共有すること</li>
-      </ul>
-
-      <h3>6. 問い合わせ先</h3>
-      <p>本マニュアルの内容に不明点がある場合は、生活相談員または管理者に確認してください。</p>
+      <h3 style="margin-top:24px;color:var(--primary-dark);">こんな時はここを見て！</h3>
+      <div class="lookup-cards">
+        <div class="lookup-card">
+          <div class="lookup-q">朝なにをすればいい？</div>
+          <div class="lookup-a">→ <a href="#ch1">第1章</a> 朝の準備</div>
+        </div>
+        <div class="lookup-card">
+          <div class="lookup-q">食事の形態は？</div>
+          <div class="lookup-a">→ <a href="#ch4">第4章</a> + <a href="#print-snack">おやつ形態表</a></div>
+        </div>
+        <div class="lookup-card">
+          <div class="lookup-q">体操のやり方は？</div>
+          <div class="lookup-a">→ <a href="#ch5">第5章</a></div>
+        </div>
+        <div class="lookup-card">
+          <div class="lookup-q">担当の病院は？</div>
+          <div class="lookup-a">→ <a href="#ch6">第6章</a> + <a href="#print-hospital">病院一覧</a></div>
+        </div>
+        <div class="lookup-card">
+          <div class="lookup-q">タブレット入力は？</div>
+          <div class="lookup-a">→ <a href="#ch3">第3章</a></div>
+        </div>
+        <div class="lookup-card">
+          <div class="lookup-q">感染症が出た！</div>
+          <div class="lookup-a">→ <a href="#ch6">第6章</a> 感染症対応</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer class="no-print">
-    <p>デイサービスセンターやわらぎ 業務マニュアル &copy; 2026</p>
+    <p>🌸 デイサービスセンターやわらぎ 業務マニュアル &copy; 2026</p>
   </footer>
 </main>
 
